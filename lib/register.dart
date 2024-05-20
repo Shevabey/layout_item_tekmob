@@ -110,17 +110,22 @@ class _LoginPageState extends State<RegisterPage> {
                     _passwordController.clear();
                     _passwordControllerRepeat.clear();
                   },
-                  child: const Text('Cancle'),
+                  style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).colorScheme.secondary,
+                  ),
+                  child: const Text('CANCLE'),
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/');
                   },
                   style: TextButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.blue, // text color
+                    elevation: 8.0,
+                    textStyle: TextStyle(fontWeight: FontWeight.w800),
+                    foregroundColor: Colors.black,
+                    backgroundColor: Color(0xFFFBB8AC), // text color
                   ),
-                  child: const Text('Daftar'),
+                  child: const Text('NEXT'),
                 )
               ],
             ),

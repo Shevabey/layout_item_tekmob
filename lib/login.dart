@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'supplemental/cut_corners_border.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
         leading: Image.asset('assets/diamond.png'),
         title: Text(
           'SHRINE',
-          style: TextStyle(color: Colors.white),
+          style: Theme.of(context).textTheme.headline5,
         ),
       ),
       body: SafeArea(
@@ -64,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                       width: 1.0,
                     ),
                   ),
-                  filled: true,
+                  // filled: true,
                   labelText: 'Masukkan Nama User'),
             ),
             const SizedBox(height: 12.0),
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                     width: 1.0,
                   ),
                 ),
-                filled: true,
+                // filled: true,
                 labelText: 'Password',
               ),
               obscureText: true,
@@ -92,17 +93,28 @@ class _LoginPageState extends State<LoginPage> {
                     _usernameController.clear();
                     _passwordController.clear();
                   },
-                  child: const Text('Cancle'),
+                  style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).colorScheme.secondary,
+                    shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                  ),
+                  child: const Text('CANCLE'),
                 ),
-                TextButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/');
                   },
                   style: TextButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.blue, // text color
+                    elevation: 8.0,
+                    shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                    textStyle: TextStyle(fontWeight: FontWeight.w800),
+                    foregroundColor: Colors.black,
+                    backgroundColor: Color(0xFFFBB8AC), // text color
                   ),
-                  child: const Text('Login'),
+                  child: const Text('NEXT'),
                 )
               ],
             ),
