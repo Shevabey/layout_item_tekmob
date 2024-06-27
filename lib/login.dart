@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
         leading: Image.asset('assets/diamond.png'),
         title: Text(
           'SHRINE',
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
       body: SafeArea(

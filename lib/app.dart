@@ -84,17 +84,17 @@ ThemeData _buildShrineTheme() {
 TextTheme _buildShrineTextTheme(TextTheme base) {
   return base
       .copyWith(
-        headline5: base.headline5!.copyWith(
+        headlineSmall: base.headlineSmall!.copyWith(
           fontWeight: FontWeight.w500,
         ),
-        headline6: base.headline6!.copyWith(
+        titleLarge: base.titleLarge!.copyWith(
           fontSize: 18.0,
         ),
-        caption: base.caption!.copyWith(
+        bodySmall: base.bodySmall!.copyWith(
           fontWeight: FontWeight.w400,
           fontSize: 14.0,
         ),
-        bodyText1: base.bodyText1!.copyWith(
+        bodyLarge: base.bodyLarge!.copyWith(
           fontWeight: FontWeight.w500,
           fontSize: 16.0,
         ),
